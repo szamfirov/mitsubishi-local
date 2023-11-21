@@ -1,20 +1,26 @@
 # Local control for Mitsubishi Electric Airco's
 
-This repo is consolidating the instructions and helper scripts used for setting up ESP8266 or ESP32 devices for local control of Mitsubishi Electric Airconditioners.
+This repo is consolidating the instructions and helper scripts used for setting up ESP8266 or ESP32 devices for local control of Mitsubishi Electric air conditioners.
 
 You can control the units by using any of the following implementations (all of which are usually based on the [SwiCago/HeatPump](https://github.com/SwiCago/HeatPump) library):
 
 *  [geoffdavis/esphome-mitsubishiheatpump](https://github.com/geoffdavis/esphome-mitsubishiheatpump)
 *  [gysmo38/mitsubishi2MQTT](https://github.com/gysmo38/mitsubishi2MQTT)
 
-:information_source: I tried both implementations and they work fine in my case with the following AC models: `MSZ-HR25VF`, `MSZ-AY42VG`
+> :information_source: I tried both of the implementations above and they work fine in my case with the following AC models:
+>
+> MSZ-HR25VF
+>
+> MSZ-AY42VG
+
+:point_right: [More supported models](https://github.com/SwiCago/HeatPump/issues/13)
 
 ## Prerequisites
 
 1.  Remove the plastic covers of your AC in order to familiarize yourself with the internals and locate the CN105 connector. It's usually in red with CN105 written right next to it.
 1.  An ESP8266 or ESP32 device which you will physically connect to your AC using the CN105 port. I purchased the following parts:
-   *   [Wemos D1 mini V4](https://a.aliexpress.com/_msr1zSy)
-   *   [PAP-05V-S connector wires](https://a.aliexpress.com/_mLbGD1a)
+    *   [Wemos D1 mini V4](https://a.aliexpress.com/_msr1zSy)
+    *   [PAP-05V-S connector wires](https://a.aliexpress.com/_mLbGD1a)
 
 1.  Connect/solder the wires _directly_ to the board as shown here: https://github.com/SwiCago/HeatPump/issues/13#issuecomment-1629319080
 1.  Install Docker on your machine in order to run the steps from these instructions later
